@@ -93,3 +93,6 @@ git clone -b master https://github.com/vernesong/OpenClash package/openclash
 # 获取hello world和依赖
 # git clone https://github.com/jerrykuku/lua-maxminddb package/diy-packages/helloworld/lua-maxminddb
 # git clone https://github.com/jerrykuku/luci-app-vssr package/diy-packages/helloworld/luci-app-vssr
+
+#访问控制
+# git clone https://github.com/k-szuster/luci-access-control.git package/mine/luci-access-control
