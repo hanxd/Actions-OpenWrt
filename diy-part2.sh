@@ -76,8 +76,7 @@ git clone https://github.com/tty228/luci-app-serverchan.git package/mine/luci-ap
 # git clone https://github.com/project-openwrt/luci-app-unblockneteasemusic-mini.git package/mine/luci-app-unblockneteasemusic-mini
 
 # OpenClash
-# git clone https://github.com/vernesong/OpenClash.git package/mine/OpenClash
-git clone https://github.com/vernesong/OpenClash package/openclash
+git clone https://github.com/vernesong/OpenClash.git package/mine/OpenClash
 
 # disable usb3.0
 # git clone https://github.com/rufengsuixing/luci-app-usb3disable.git package/mine/luci-app-usb3disable
