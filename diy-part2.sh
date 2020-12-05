@@ -83,7 +83,7 @@ git clone -b master https://github.com/vernesong/OpenClash package/openclash
 # git clone https://github.com/rufengsuixing/luci-app-usb3disable.git package/mine/luci-app-usb3disable
 
 # 管控上网行为
-# git clone https://github.com/destan19/OpenAppFilter.git package/mine/OpenAppFilter
+git clone https://github.com/destan19/OpenAppFilter.git package/mine/OpenAppFilter
 
 # Rclone-OpenWrt
 # git clone https://github.com/ElonH/Rclone-OpenWrt.git package/mine/Rclone-OpenWrt
@@ -95,4 +95,15 @@ git clone -b master https://github.com/vernesong/OpenClash package/openclash
 # git clone https://github.com/jerrykuku/luci-app-vssr package/diy-packages/helloworld/luci-app-vssr
 
 #访问控制
-# git clone https://github.com/k-szuster/luci-access-control.git package/mine/luci-access-control
+git clone https://github.com/k-szuster/luci-access-control.git package/mine/luci-access-control
+
+#流量监视
+git clone https://github.com/brvphoenix/wrtbwmon.git package/mine/wrtbwmon
+git clone https://github.com/brvphoenix/luci-app-wrtbwmon.git package/mine/luci-app-wrtbwmon
+
+#京东签到
+git clone https://github.com/jerrykuku/node-request.git package/mine/node-request
+git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/mine/luci-app-jd-dailybonus
+
+#beardropper
+git clone https://github.com/NateLol/luci-app-beardropper.git package/mine/luci-app-beardropper
