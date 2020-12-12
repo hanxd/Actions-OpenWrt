@@ -34,6 +34,8 @@ sed -i "s/'UTC'/'CST-8'\n        set system.@system[-1].zonename='Asia\/Shanghai
 #echo '修改机器名称'
 # sed -i 's/OpenWrt/GL.iNet/g' package/base-files/files/bin/config_generate
 
+sed -i '/exit/i\chown -R root:root /usr/share/netdata/web' package/lean/default-settings/files/zzz-default-settings
+
 #echo '修改wifi名称'
 # sed -i 's/OpenWrt/iNetHotspot/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
