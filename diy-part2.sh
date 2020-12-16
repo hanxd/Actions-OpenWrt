@@ -22,10 +22,10 @@ sed -i "s/'UTC'/'CST-8'\n        set system.@system[-1].zonename='Asia\/Shanghai
 
 #=================================================
 # 清除旧版argon主题并拉取最新版
-# pushd package/lean
-# rm -rf luci-theme-argon
-# git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon luci-theme-argon
-# popd
+pushd package/lean
+rm -rf luci-theme-argon
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon luci-theme-argon
+popd
 #=================================================
 
 #echo 'Netgearrainbow'
@@ -70,15 +70,14 @@ git clone https://github.com/tty228/luci-app-serverchan.git package/mine/luci-ap
 
 # 网易云音乐
 # git clone https://github.com/project-openwrt/luci-app-unblockneteasemusic.git package/mine/luci-app-unblockneteasemusic
-
 # 网易云音乐GoLang版本
 # git clone https://github.com/project-openwrt/luci-app-unblockneteasemusic-go.git package/mine/luci-app-unblockneteasemusic-go
-
 # 网易云音乐mini
 # git clone https://github.com/project-openwrt/luci-app-unblockneteasemusic-mini.git package/mine/luci-app-unblockneteasemusic-mini
 
 # OpenClash
-git clone https://github.com/vernesong/OpenClash.git package/mine/OpenClash
+git clone -b master https://github.com/vernesong/OpenClash package/OpenClash
+# git clone https://github.com/vernesong/OpenClash.git package/mine/OpenClash
 
 # disable usb3.0
 # git clone https://github.com/rufengsuixing/luci-app-usb3disable.git package/mine/luci-app-usb3disable
