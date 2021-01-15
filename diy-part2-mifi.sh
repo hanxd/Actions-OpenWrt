@@ -33,6 +33,9 @@ sed -i 's/mt7620n.dtsi/mt7620a.dtsi/g' target/linux/ramips/dts/mt7620n_zbtlink_z
 sed -i 's/mt7620n-soc/mt7620a-soc/g' target/linux/ramips/dts/mt7620n_zbtlink_zbt-cpe102.dts
 # sed -i '/zbtlink_zbt-cpe102/{s/7552k))$/15872k))/;}' target/linux/ramips/image/mt7620.mk
 
+#echo 'art.dts'
+sed -i 's/#size-cells = <1>;/partition@ff0000 {label = "art";reg = <0xff0000 0x10000>;};/' target/linux/ramips/dts/mt7620n_zbtlink_zbt-cpe102.dts
+
 #echo '删除旧版mt7620.mk,链接新版'
 # rm -rf ./target/linux/ramips/image/mt7620.mk
 # ln -s ../../../Dir/mt7620.mk ./target/linux/ramips/image/mt7620.mk
