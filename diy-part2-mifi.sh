@@ -26,11 +26,11 @@ sed -i '/^EOF/i \            \set wireless.default_radio${devidx}.key=1234567890
 
 #echo '删除旧版mt7620.mk,链接新版'
 rm -rf ./target/linux/ramips/image/mt7620.mk
-ln -s ../../../Dir/mt7620.mk ./target/linux/ramips/image
+ln -s ../../../Dir/mt7620.mk ./target/linux/ramips/image/mt7620.mk
 
 rm -rf ./target/linux/ramips/dts/mt7620n_zbtlink_zbt-cpe102.dts
-ln -s ../../../Dir/mt7620n_zbtlink_zbt-cpe102.dts ./target/linux/ramips/dts
-ln -s ../../../Dir/mt7620a_zbtlink_zbt-cpe102.dts ./target/linux/ramips/dts
+ln -s ../../../Dir/mt7620n_zbtlink_zbt-cpe102.dts ./target/linux/ramips/dts/mt7620n_zbtlink_zbt-cpe102.dts
+ln -s ../../../Dir/mt7620a_zbtlink_zbt-cpe102.dts ./target/linux/ramips/dts/mt7620a_zbtlink_zbt-cpe102.dts
 
 #echo 'quectel'
 ln -s ../../../quectel ./package/lean/
