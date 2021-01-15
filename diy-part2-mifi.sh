@@ -20,6 +20,7 @@ sed -i '/^EOF/i \            \set wireless.default_radio${devidx}.key=1234567890
 # sed -i '/^exit 0/i echo 0xDEADBEEF > /etc/config/google_fu_mode' openwrt/package/lean/default-settings/files/zzz-default-settings
 
 sed -i 's/7552k/15872k/g' target/linux/ramips/image/mt7620.mk
+sed -i 's/760000/f80000/g' target/linux/ramips/dts/mt7620n_zbtlink_zbt-cpe102.dts
 # sed -i 's/7552k/15872k/g ; s/mt7620n/mt7620a/g' target/linux/ramips/image/mt7620.mk
 # sed -i '/zbtlink_zbt-cpe102/{s/7552k))$/15872k))/;}' target/linux/ramips/image/mt7620.mk
 
