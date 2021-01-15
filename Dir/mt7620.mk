@@ -1106,7 +1106,7 @@ endef
 TARGET_DEVICES += zbtlink_zbt-ape522ii
 
 define Device/zbtlink_zbt-cpe102
-  SOC := mt7620a
+  SOC := mt7620n
   IMAGE_SIZE := 15872k
   DEVICE_VENDOR := Zbtlink
   DEVICE_MODEL := ZBT-CPE102
