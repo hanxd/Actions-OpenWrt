@@ -30,6 +30,7 @@ ln -s ../../../Dir/mt7620.mk ./target/linux/ramips/image
 
 rm -rf ./target/linux/ramips/dts/mt7620n_zbtlink_zbt-cpe102.dts
 ln -s ../../../Dir/mt7620n_zbtlink_zbt-cpe102.dts ./target/linux/ramips/dts
+ln -s ../../../Dir/mt7620a_zbtlink_zbt-cpe102.dts ./target/linux/ramips/dts
 
 #echo 'quectel'
 ln -s ../../../quectel ./package/lean/
