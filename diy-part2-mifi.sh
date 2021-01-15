@@ -19,5 +19,7 @@ sed -i '/^EOF/i \            \set wireless.default_radio${devidx}.key=1234567890
 # sed -i 's/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF./$1$GzaZpWin$e5M.CJ2ooGgDXrbQWltbd0/g' openwrt/package/lean/default-settings/files/zzz-default-settings
 # sed -i '/^exit 0/i echo 0xDEADBEEF > /etc/config/google_fu_mode' openwrt/package/lean/default-settings/files/zzz-default-settings
 
+sed -i 's/7552k/15872k/g ; s/mt7620n/mt7620a/g' target/linux/ramips/image/mt7620.mk
+
 #echo 'quectel'
 ln -s ../../../quectel ./package/lean/
