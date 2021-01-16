@@ -11,7 +11,7 @@
 #
 
 # Modify default IP
-sed -i 's/192.168.1.1/10.1.10.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/10.10.1.1/g' package/base-files/files/bin/config_generate
 
 #echo '修改时区'
 sed -i "s/'UTC'/'CST-8'\n        set system.@system[-1].zonename='Asia\/Shanghai'/g" package/base-files/files/bin/config_generate
@@ -35,7 +35,7 @@ sed -i 's/mt7620n-soc/mt7620a-soc/g' target/linux/ramips/dts/mt7620n_zbtlink_zbt
 # sed -i '58,80s/read-only;/#' target/linux/ramips/dts/mt7620n_zbtlink_zbt-cpe102.dts
 
 #echo 'art.dts'
-sed -i 's/#size-cells = <1>;/partition@ff0000 {label = "art";reg = <0xff0000 0x10000>;};/' target/linux/ramips/dts/mt7620n_zbtlink_zbt-cpe102.dts
+# sed -i 's/#size-cells = <1>;/partition@ff0000 {label = "art";reg = <0xff0000 0x10000>;};/' target/linux/ramips/dts/mt7620n_zbtlink_zbt-cpe102.dts
 
 #echo '删除旧版mt7620.mk,链接新版'
 # rm -rf ./target/linux/ramips/image/mt7620.mk
@@ -48,7 +48,6 @@ sed -i 's/#size-cells = <1>;/partition@ff0000 {label = "art";reg = <0xff0000 0x1
 
 #echo 'quectel'
 ln -s ../../../quectel ./package/lean/
-
 # Server酱
 git clone https://github.com/tty228/luci-app-serverchan.git package/mine/luci-app-serverchan
 
