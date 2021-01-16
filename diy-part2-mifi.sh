@@ -11,7 +11,7 @@
 #
 
 # Modify default IP
-sed -i 's/192.168.1.1/10.10.1.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/10.10.10.1/g' package/base-files/files/bin/config_generate
 
 #echo '修改时区'
 sed -i "s/'UTC'/'CST-8'\n        set system.@system[-1].zonename='Asia\/Shanghai'/g" package/base-files/files/bin/config_generate
@@ -23,14 +23,12 @@ sed -i 's/OpenWrt/CPE.iNet/g' package/base-files/files/bin/config_generate
 sed -i 's/OpenWrt/iNet/g ; s/none/psk2/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 sed -i '/^EOF/i \            \set wireless.default_radio${devidx}.key=567890321' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 # sed -i 's/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF./$1$GzaZpWin$e5M.CJ2ooGgDXrbQWltbd0/g' openwrt/package/lean/default-settings/files/zzz-default-settings
-# sed -i '/^exit 0/i echo 0xDEADBEEF > /etc/config/google_fu_mode' openwrt/package/lean/default-settings/files/zzz-default-settings
 
 sed -i 's/7552k/15872k/g' target/linux/ramips/image/mt7620.mk
-# sed -i 's/mt7620n/mt7620a/g' target/linux/ramips/image/mt7620.mk
-# sed -i '58,80d/read-only;' target/linux/ramips/dts/mt7620n_zbtlink_zbt-cpe102.dts
 sed -i 's/760000/f80000/g' target/linux/ramips/dts/mt7620n_zbtlink_zbt-cpe102.dts
-sed -i 's/mt7620n.dtsi/mt7620a.dtsi/g' target/linux/ramips/dts/mt7620n_zbtlink_zbt-cpe102.dts
 sed -i 's/mt7620n-soc/mt7620a-soc/g' target/linux/ramips/dts/mt7620n_zbtlink_zbt-cpe102.dts
+sed -i 's/mt7620n.dtsi/mt7620a.dtsi/g' target/linux/ramips/dts/mt7620n_zbtlink_zbt-cpe102.dts
+# sed -i '58,80d/read-only;' target/linux/ramips/dts/mt7620n_zbtlink_zbt-cpe102.dts
 # sed -i '/zbtlink_zbt-cpe102/{s/7552k))$/15872k))/;}' target/linux/ramips/image/mt7620.mk
 # sed -i '58,80s/read-only;/#' target/linux/ramips/dts/mt7620n_zbtlink_zbt-cpe102.dts
 
@@ -54,4 +52,4 @@ git clone https://github.com/tty228/luci-app-serverchan.git package/mine/luci-ap
 # ln -s ../../../patches/997-hxd-ec20.patch ./target/linux/ramips/patches-5.4/patches/997-hxd-ec20.patch
 # cp ../patches/997-hxd-ec20.patch target/linux/ramips/patches-5.4/997-hxd-ec20.patch
 # mv ../../../997-hxd-ec20.patch target/linux/ramips/patches-5.4/997-hxd-ec20.patch
-mv ../../patches/997-hxd-ec20.patch target/linux/ramips/patches-5.4
+# mv ../../patches/997-hxd-ec20.patch target/linux/ramips/patches-5.4
