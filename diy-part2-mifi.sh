@@ -51,6 +51,6 @@ ln -s ../../../quectel ./package/lean/
 # Server酱
 git clone https://github.com/tty228/luci-app-serverchan.git package/mine/luci-app-serverchan
 
-ln -s ../../../patches/997-hxd-ec20.patch .target/linux/ramips/patches-5.4/patches/997-hxd-ec20.patch
+ln -s ../../../patches/997-hxd-ec20.patch ./target/linux/ramips/patches-5.4/patches/997-hxd-ec20.patch
 # cp ../patches/997-hxd-ec20.patch target/linux/ramips/patches-5.4/997-hxd-ec20.patch
 # mv ../../../997-hxd-ec20.patch target/linux/ramips/patches-5.4/997-hxd-ec20.patch
