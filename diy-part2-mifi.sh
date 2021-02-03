@@ -28,7 +28,6 @@ sed -i 's/7552k/15872k/g' target/linux/ramips/image/mt7620.mk
 sed -i 's/760000/f80000/g' target/linux/ramips/dts/mt7620n_zbtlink_zbt-cpe102.dts
 sed -i 's/mt7620n-soc/mt7620a-soc/g' target/linux/ramips/dts/mt7620n_zbtlink_zbt-cpe102.dts
 sed -i 's/mt7620n.dtsi/mt7620a.dtsi/g' target/linux/ramips/dts/mt7620n_zbtlink_zbt-cpe102.dts
-# sed -i '58,80d/read-only;' target/linux/ramips/dts/mt7620n_zbtlink_zbt-cpe102.dts
 # sed -i '/zbtlink_zbt-cpe102/{s/7552k))$/15872k))/;}' target/linux/ramips/image/mt7620.mk
 # sed -i '58,80s/read-only;/#' target/linux/ramips/dts/mt7620n_zbtlink_zbt-cpe102.dts
 
@@ -39,10 +38,6 @@ sed -i 's/mt7620n.dtsi/mt7620a.dtsi/g' target/linux/ramips/dts/mt7620n_zbtlink_z
 # rm -rf ./target/linux/ramips/image/mt7620.mk
 # ln -s ../../../Dir/mt7620.mk ./target/linux/ramips/image/mt7620.mk
 # cp -f ../Dir/mt7620.mk ./target/linux/ramips/image/mt7620.mk
-# ln -s ../../../Dir/mt7620n_zbtlink_zbt-cpe102.dts ./target/linux/ramips/dts/mt7620n_zbtlink_zbt-cpe102.dts
-# ln -s ../../../Dir/mt7620a_zbtlink_zbt-cpe102.dts ./target/linux/ramips/dts/mt7620a_zbtlink_zbt-cpe102.dts
-# cp -f ../Dir/mt7620n_zbtlink_zbt-cpe102.dts ./target/linux/ramips/dts/mt7620n_zbtlink_zbt-cpe102.dts
-# cp -f ../Dir/mt7620a_zbtlink_zbt-cpe102.dts ./target/linux/ramips/dts/mt7620a_zbtlink_zbt-cpe102.dts
 
 #echo 'quectel'
 ln -s ../../../quectel ./package/lean/
@@ -53,4 +48,4 @@ git clone https://github.com/tty228/luci-app-serverchan.git package/mine/luci-ap
 # cp ../patches/997-hxd-ec20.patch target/linux/ramips/patches-5.4/997-hxd-ec20.patch
 # mv ../../../997-hxd-ec20.patch target/linux/ramips/patches-5.4/997-hxd-ec20.patch
 # mv ../../patches/997-hxd-ec20.patch target/linux/ramips/patches-5.4
-cp -f ../../../patches/997-hxd-ec20.patch ./target/linux/ramips/patches-5.4/997-hxd-ec20.patch
+cp -f ../../../patches/997-hxd-ec20.patch target/linux/ramips/patches-5.4/997-hxd-ec20.patch
