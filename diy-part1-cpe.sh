@@ -17,8 +17,6 @@ sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 # sed -i '$a src-git vpasswall https://github.com/xiaorouji/openwrt-passwall.git' feeds.conf.default
 
 
-#!/bin/sh
-
 # all commands involving downloads are run twice to ensure all files are downloaded
 
 # uncomment the two lines below if you are using Linux Mint 18
