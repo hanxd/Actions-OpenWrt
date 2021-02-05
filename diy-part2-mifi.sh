@@ -48,4 +48,4 @@ git clone https://github.com/tty228/luci-app-serverchan.git package/mine/luci-ap
 # cp ../patches/997-hxd-ec20.patch target/linux/ramips/patches-5.4/997-hxd-ec20.patch
 # mv ../../../997-hxd-ec20.patch target/linux/ramips/patches-5.4/997-hxd-ec20.patch
 # mv ../../patches/997-hxd-ec20.patch target/linux/ramips/patches-5.4
-cp -r ../../../patches/ target/linux/ramips/patches-5.4/
+# cp -r ../../../patches/ target/linux/ramips/patches-5.4/
