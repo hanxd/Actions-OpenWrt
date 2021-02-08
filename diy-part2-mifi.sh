@@ -39,6 +39,12 @@ sed -i 's/mt7620n.dtsi/mt7620a.dtsi/g' target/linux/ramips/dts/mt7620n_zbtlink_z
 # sed -i '/zbtlink_zbt-cpe102/{s/7552k))$/15872k))/;}' target/linux/ramips/image/mt7620.mk
 # sed -i '58,80s/read-only;/#' target/linux/ramips/dts/mt7620n_zbtlink_zbt-cpe102.dts
 
+# echo '集成diy目录'
+# ln -s ../../diy ./package/openwrt-packages
+
+# echo '修改banner'
+cp -f ../luci-app-hotspot package/lean/
+
 #echo 'art.dts'
 # sed -i 's/#size-cells = <1>;/partition@ff0000 {label = "art";reg = <0xff0000 0x10000>;};/' target/linux/ramips/dts/mt7620n_zbtlink_zbt-cpe102.dts
 
@@ -50,14 +56,6 @@ sed -i 's/mt7620n.dtsi/mt7620a.dtsi/g' target/linux/ramips/dts/mt7620n_zbtlink_z
 #echo 'quectel'
 ln -s ../../../quectel ./package/lean/
 
-#echo 'hotspot'
-ln -s ../../../luci-app-hotspot ./package/lean/
-
 # Server酱
 git clone https://github.com/tty228/luci-app-serverchan.git package/mine/luci-app-serverchan
 
-# ln -s ../../../patches/997-hxd-ec20.patch ./target/linux/ramips/patches-5.4/patches/997-hxd-ec20.patch
-# cp ../patches/997-hxd-ec20.patch target/linux/ramips/patches-5.4/997-hxd-ec20.patch
-# mv ../../../997-hxd-ec20.patch target/linux/ramips/patches-5.4/997-hxd-ec20.patch
-# mv ../../patches/997-hxd-ec20.patch target/linux/ramips/patches-5.4
-# cp -r ../../../patches/ target/linux/ramips/patches-5.4/
