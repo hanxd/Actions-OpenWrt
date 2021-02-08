@@ -42,7 +42,7 @@ sed -i 's/mt7620n.dtsi/mt7620a.dtsi/g' target/linux/ramips/dts/mt7620n_zbtlink_z
 # echo '集成diy目录'
 # ln -s ../../diy ./package/openwrt-packages
 
-# echo '修改banner'
+# echo 'hotspot'
 cp -f ../luci-app-hotspot package/lean/
 
 #echo 'art.dts'
