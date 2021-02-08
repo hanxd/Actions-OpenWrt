@@ -49,6 +49,10 @@ sed -i 's/mt7620n.dtsi/mt7620a.dtsi/g' target/linux/ramips/dts/mt7620n_zbtlink_z
 
 #echo 'quectel'
 ln -s ../../../quectel ./package/lean/
+
+#echo 'hotspot'
+ln -s ../../../luci-app-hotspot ./package/lean/
+
 # Server酱
 git clone https://github.com/tty228/luci-app-serverchan.git package/mine/luci-app-serverchan
 
