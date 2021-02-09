@@ -44,7 +44,7 @@ sed -i 's/mt7620n.dtsi/mt7620a.dtsi/g' target/linux/ramips/dts/mt7620n_zbtlink_z
 
 # echo 'hotspot'
 # cp -f ../luci-app-hotspot package/lean/
-git clone https://github.com/hanxd/extd.git package/mine/luci-app-hotspot
+# git clone https://github.com/hanxd/extd.git package/mine/luci-app-hotspot
 
 #echo 'art.dts'
 # sed -i 's/#size-cells = <1>;/partition@ff0000 {label = "art";reg = <0xff0000 0x10000>;};/' target/linux/ramips/dts/mt7620n_zbtlink_zbt-cpe102.dts
