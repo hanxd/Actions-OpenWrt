@@ -42,6 +42,17 @@ sed -i 's/mt7620n.dtsi/mt7620a.dtsi/g' target/linux/ramips/dts/mt7620n_zbtlink_z
 # echo '集成diy目录'
 # ln -s ../../diy ./package/openwrt-packages
 
+#=================================================
+# 清除旧版argon主题并拉取最新版
+pushd package/lean
+rm -rf luci-theme-argon
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon luci-theme-argon
+popd
+#=================================================
+
+#echo 'Netgearrainbow'
+# ln -s ../../../luci-theme-netgearrainbow ./package/lean/
+
 # echo 'hotspot'
 # cp -f ../luci-app-hotspot package/lean/
 # git clone https://github.com/hanxd/extd.git package/mine/luci-app-hotspot
