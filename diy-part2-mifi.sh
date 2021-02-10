@@ -66,7 +66,7 @@ popd
 # cp -f ../Dir/mt7620.mk ./target/linux/ramips/image/mt7620.mk
 
 #echo 'quectel'
-ln -s ../../../quectel ./package/lean/
+# ln -s ../../../quectel ./package/lean/
 
 # Server酱
 git clone https://github.com/tty228/luci-app-serverchan.git package/mine/luci-app-serverchan
