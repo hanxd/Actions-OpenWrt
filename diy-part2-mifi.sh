@@ -43,10 +43,11 @@ sed -i 's/mt7620n.dtsi/mt7620a.dtsi/g' target/linux/ramips/dts/mt7620n_zbtlink_z
 # 清除旧版argon主题并拉取最新版
 pushd package/lean
 rm -rf luci-theme-argon
+# svn co https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom/trunk/luci-theme-infinityfreedom
+# rm -rf luci-theme-infinityfreedom/luci-theme-infinityfreedom/files/htdocs/images/main_bg_5k.jpg
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon luci-theme-argon
 popd
 #=================================================
-# sed -i '/uci commit luci/i\uci set luci.main.mediaurlbase=/luci-static/argon' package/lean/default-settings/files/zzz-default-settings
 
 #echo 'Netgearrainbow'
 # ln -s ../../../luci-theme-netgearrainbow ./package/lean/
