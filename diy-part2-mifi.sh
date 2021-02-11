@@ -40,12 +40,13 @@ sed -i 's/mt7620n.dtsi/mt7620a.dtsi/g' target/linux/ramips/dts/mt7620n_zbtlink_z
 # ln -s ../../diy ./package/openwrt-packages
 
 #=================================================
-# 清除旧版argon主题并拉取最新版
+# 主题DIY并拉取最新版
 pushd package/lean
 rm -rf luci-theme-argon
 # svn co https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom/trunk/luci-theme-infinityfreedom
 # rm -rf luci-theme-infinityfreedom/luci-theme-infinityfreedom/files/htdocs/images/main_bg_5k.jpg
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon luci-theme-argon
+git clone https://github.com/jerrykuku/luci-app-argon-config.git luci-app-argon-config
 popd
 #=================================================
 
