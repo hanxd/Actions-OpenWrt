@@ -76,6 +76,6 @@ git clone https://github.com/tty228/luci-app-serverchan.git package/mine/luci-ap
 
 # luci-app-modeminfo
 git clone https://github.com/koshev-msk/luci-app-atinout.git package/mine/luci-app-atinout
+git clone https://github.com/koshev-msk/luci-app-mmconfig.git package/mine/luci-app-mmconfig
 git clone https://github.com/koshev-msk/luci-app-modeminfo.git package/mine/luci-app-modeminfo
 git clone https://github.com/koshev-msk/luci-app-smstools3.git package/mine/luci-app-smstools3
-git clone https://github.com/koshev-msk/luci-app-mmconfig.git package/mine/luci-app-mmconfig
