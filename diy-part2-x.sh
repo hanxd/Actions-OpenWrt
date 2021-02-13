@@ -68,13 +68,14 @@ popd
 #echo 'art.dts'
 # sed -i 's/#size-cells = <1>;/partition@ff0000 {label = "art";reg = <0xff0000 0x10000>;};/' target/linux/ramips/dts/mt7620n_zbtlink_zbt-cpe102.dts
 
-#echo '删除旧版mt7620.mk,链接新版'
-
 #echo 'quectel'
 # ln -s ../../../quectel ./package/lean/
 
 # Server酱
 git clone https://github.com/tty228/luci-app-serverchan.git package/mine/luci-app-serverchan
 
-# Server酱
+# luci-app-modeminfo
 git clone https://github.com/koshev-msk/luci-app-modeminfo.git package/mine/luci-app-modeminfo
+
+# smstools3
+git clone https://github.com/koshev-msk/luci-app-smstools3.git package/mine/luci-app-smstools3
