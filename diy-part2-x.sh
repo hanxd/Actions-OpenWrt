@@ -75,3 +75,6 @@ popd
 
 # Server酱
 git clone https://github.com/tty228/luci-app-serverchan.git package/mine/luci-app-serverchan
+
+# Server酱
+git clone https://github.com/koshev-msk/luci-app-modeminfo.git package/mine/luci-app-modeminfo
