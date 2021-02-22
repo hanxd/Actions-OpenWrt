@@ -1,16 +1,17 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=quectel
-PKG_VERSION:=prince-1.0
+PKG_VERSION:=1.000
 PKG_BUILD_DIR:= $(BUILD_DIR)/$(PKG_NAME)
 
 include $(INCLUDE_DIR)/package.mk
 
 define Package/$(PKG_NAME)
-	SECTION:=base
-	CATEGORY:=Utilities
+	SECTION:=luci
+	CATEGORY:=LuCI
+	SUBMENU:=3. Applications
 	TITLE:=quectel pppd firmware
-	SUBMENU:=prince
+	PKGARCH:=all
 	DEPENDS:= +libpthread +kmod-usb-net +kmod-usb-net-qmi-wwan +kmod-usb-wdm +kmod-usb-serial +kmod-usb-serial-option +kmod-usb-serial-wwan +wwan
 endef
 
