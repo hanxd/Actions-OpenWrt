@@ -23,25 +23,23 @@ sed -i '/^EOF/i \            \set wireless.default_radio${devidx}.key=567890321'
 # sed -i 's/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF./$1$GzaZpWin$e5M.CJ2ooGgDXrbQWltbd0/g' openwrt/package/lean/default-settings/files/zzz-default-settings
 
 #echo 'DHCP'
-# sed -i '/mwan/i uci set network.RNDIS=interface' package/lean/default-settings/files/zzz-default-settings
-# sed -i '/mwan/i uci set network.RNDIS.ifname=usb0' package/lean/default-settings/files/zzz-default-settings
-# sed -i '/mwan/i uci set network.RNDIS.proto=dhcp' package/lean/default-settings/files/zzz-default-settings
-# sed -i '/mwan/i uci set network.RNDISv6=interface' package/lean/default-settings/files/zzz-default-settings
-# sed -i '/mwan/i uci set network.RNDISv6.ifname=usb0' package/lean/default-settings/files/zzz-default-settings
-# sed -i '/mwan/i uci set network.RNDISv6.proto=dhcpv6' package/lean/default-settings/files/zzz-default-settings
-# sed -i '/mwan/i uci set network.RNDISv6.reqaddress=try' package/lean/default-settings/files/zzz-default-settings
-# sed -i '/mwan/i uci set network.RNDISv6.reqprefix=auto' package/lean/default-settings/files/zzz-default-settings
-# sed -i '/mwan/i uci commit network' package/lean/default-settings/files/zzz-default-settings
-# sed -i "/mwan/i uci set firewall.@zone[1].network='wan wan6 RNDIS RNDISv6'" package/lean/default-settings/files/zzz-default-settings
-# sed -i '/mwan/i uci commit firewall' package/lean/default-settings/files/zzz-default-settings
+sed -i '/mwan/i uci set network.RNDIS=interface' package/lean/default-settings/files/zzz-default-settings
+sed -i '/mwan/i uci set network.RNDIS.ifname=usb0' package/lean/default-settings/files/zzz-default-settings
+sed -i '/mwan/i uci set network.RNDIS.proto=dhcp' package/lean/default-settings/files/zzz-default-settings
+sed -i '/mwan/i uci set network.RNDISv6=interface' package/lean/default-settings/files/zzz-default-settings
+sed -i '/mwan/i uci set network.RNDISv6.ifname=usb0' package/lean/default-settings/files/zzz-default-settings
+sed -i '/mwan/i uci set network.RNDISv6.proto=dhcpv6' package/lean/default-settings/files/zzz-default-settings
+sed -i '/mwan/i uci set network.RNDISv6.reqaddress=try' package/lean/default-settings/files/zzz-default-settings
+sed -i '/mwan/i uci set network.RNDISv6.reqprefix=auto' package/lean/default-settings/files/zzz-default-settings
+sed -i '/mwan/i uci commit network' package/lean/default-settings/files/zzz-default-settings
+sed -i "/mwan/i uci set firewall.@zone[1].network='wan wan6 RNDIS RNDISv6'" package/lean/default-settings/files/zzz-default-settings
+sed -i '/mwan/i uci commit firewall' package/lean/default-settings/files/zzz-default-settings
 
 #echo 'Model '
-# sed -i 's/HNET C108/Mifi/g' target/linux/ramips/dts/mt7620a_hnet_c108.dts
-# sed -i 's/wwan0/usb0/g' target/linux/ramips/mt7620/base-files/etc/board.d/01_leds
-# sed -i 's/7552k/15872k/g' target/linux/ramips/image/mt7620.mk
+sed -i 's/HNET C108/Mifi/g' target/linux/ramips/dts/mt7620a_hnet_c108.dts
+sed -i 's/wwan0/usb0/g' target/linux/ramips/mt7620/base-files/etc/board.d/01_leds
+
 # sed -i 's/760000/f80000/g' target/linux/ramips/dts/mt7620n_zbtlink_zbt-cpe102.dts
-# sed -i 's/mt7620n-soc/mt7620a-soc/g' target/linux/ramips/dts/mt7620n_zbtlink_zbt-cpe102.dts
-# sed -i 's/mt7620n.dtsi/mt7620a.dtsi/g' target/linux/ramips/dts/mt7620n_zbtlink_zbt-cpe102.dts
 # sed -i '/zbtlink_zbt-cpe102/{s/7552k))$/15872k))/;}' target/linux/ramips/image/mt7620.mk
 
 # echo '集成diy目录'
@@ -65,11 +63,8 @@ popd
 # cp -f ../luci-app-hotspot package/lean/
 # git clone https://github.com/hanxd/extd.git package/mine/luci-app-hotspot
 
-#echo 'art.dts'
-# sed -i 's/#size-cells = <1>;/partition@ff0000 {label = "art";reg = <0xff0000 0x10000>;};/' target/linux/ramips/dts/mt7620n_zbtlink_zbt-cpe102.dts
-
 #echo 'quectel'
-# ln -s ../../../quectel ./package/lean/
+ln -s ../../../quectel ./package/lean/
 
 # Server酱
 git clone https://github.com/tty228/luci-app-serverchan.git package/mine/luci-app-serverchan
