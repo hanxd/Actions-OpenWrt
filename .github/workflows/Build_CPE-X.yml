@@ -67,8 +67,6 @@ jobs:
         chmod +x $DIY_P1_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P1_SH
-        cd target/linux/ramips/patches-5.4
-        wget https://github.com/hanxd/extd/releases/download/V1/997-hxd-ec20.patch
 
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
