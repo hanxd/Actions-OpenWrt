@@ -67,8 +67,8 @@ popd
 #=================================================
 # Travelmate
 pushd feeds/packages/net
-# rm -rf travelmate
-# svn co https://github.com/openwrt/packages/trunk/net/travelmate
+rm -rf travelmate
+svn co https://github.com/openwrt/packages/trunk/net/travelmate
 popd
 
 pushd feeds/luci/applications
