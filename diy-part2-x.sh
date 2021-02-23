@@ -70,6 +70,11 @@ pushd feeds/packages/net
 rm -rf travelmate
 svn co https://github.com/openwrt/packages/trunk/net/travelmate
 popd
+
+pushd feeds/luci/applications/
+rm -rf luci-app-travelmate
+svn co https://github.com/openwrt/luci/trunk/applications/luci-app-travelmate
+popd
 #=================================================
 
 #echo 'Netgearrainbow'
@@ -80,7 +85,7 @@ popd
 # git clone https://github.com/hanxd/extd.git package/mine/luci-app-hotspot
 
 #echo 'quectel'
-ln -s ../../../quectel ./package/lean/
+# ln -s ../../../quectel ./package/lean/
 
 # Server酱
 git clone https://github.com/tty228/luci-app-serverchan.git package/mine/luci-app-serverchan
