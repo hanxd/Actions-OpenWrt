@@ -56,6 +56,22 @@ git clone https://github.com/jerrykuku/luci-app-argon-config.git luci-app-argon-
 popd
 #=================================================
 
+#=================================================
+# EC20.patches
+pushd target/linux/ramips/patches-5.4
+rm -rf 997-hxd-ec20.patch
+wget https://github.com/hanxd/extd/releases/download/V1/997-hxd-ec20.patch
+popd
+#=================================================
+
+#=================================================
+# Travelmate
+pushd feeds/packages/net
+rm -rf travelmate
+svn co https://github.com/openwrt/packages/trunk/net/travelmate
+popd
+#=================================================
+
 #echo 'Netgearrainbow'
 # ln -s ../../../luci-theme-netgearrainbow ./package/lean/
 
