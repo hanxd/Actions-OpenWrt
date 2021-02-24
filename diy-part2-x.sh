@@ -66,15 +66,15 @@ popd
 
 #=================================================
 # Travelmate
-pushd feeds/packages/net
-rm -rf travelmate
-svn co https://github.com/openwrt/packages/trunk/net/travelmate
-popd
+# pushd feeds/packages/net
+# rm -rf travelmate
+# svn co https://github.com/openwrt/packages/trunk/net/travelmate
+# popd
 
-pushd feeds/luci/applications
+# pushd feeds/luci/applications
 # rm -rf luci-app-travelmate
 # svn co https://github.com/openwrt/luci/trunk/applications/luci-app-travelmate
-popd
+# popd
 #=================================================
 
 #echo 'Netgearrainbow'
