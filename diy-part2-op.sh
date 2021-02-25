@@ -10,22 +10,6 @@
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
 
-# Modify default IP
-sed -i 's/192.168.1.1/10.10.10.1/g' package/base-files/files/bin/config_generate
-
-#echo '修改时区'
-sed -i "s/'UTC'/'CST-8'\n        set system.@system[-1].zonename='Asia\/Shanghai'/g" package/base-files/files/bin/config_generate
-
-#echo '修改机器名称'
-sed -i 's/OpenWrt/iNet/g' package/base-files/files/bin/config_generate
-sed -i 's/US/CN/g ; s/OpenWrt/iNet/g ; s/none/psk-mixed/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
-sed -i '/^EOF/i \            \set wireless.default_radio${devidx}.key=567890321' package/kernel/mac80211/files/lib/wifi/mac80211.sh
-# sed -i 's/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF./$1$GzaZpWin$e5M.CJ2ooGgDXrbQWltbd0/g' openwrt/package/lean/default-settings/files/zzz-default-settings
-
-#echo 'Model '
-sed -i 's/HNET C108/Mifi/g' target/linux/ramips/dts/mt7620a_hnet_c108.dts
-sed -i 's/wwan0/usb0/g' target/linux/ramips/mt7620/base-files/etc/board.d/01_leds
-
 #=================================================
 # 主题DIY并拉取最新版
 cd openwrt/package
