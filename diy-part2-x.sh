@@ -66,15 +66,15 @@ popd
 
 #=================================================
 # Travelmate
-pushd feeds/packages/net
-rm -rf travelmate
-svn co https://github.com/hanxd/ltm/trunk/travelmate
-popd
+# pushd feeds/packages/net
+# rm -rf travelmate
+# svn co https://github.com/hanxd/ltm/trunk/travelmate
+# popd
 
-pushd feeds/luci/applications
-rm -rf luci-app-travelmate
-svn co https://github.com/hanxd/ltm/trunk/luci-app-travelmate
-popd
+# pushd feeds/luci/applications
+# rm -rf luci-app-travelmate
+# svn co https://github.com/hanxd/ltm/trunk/luci-app-travelmate
+# popd
 #=================================================
 
 #echo 'Netgearrainbow'
@@ -92,6 +92,6 @@ git clone https://github.com/tty228/luci-app-serverchan.git package/mine/luci-ap
 
 # luci-app-modeminfo
 # git clone https://github.com/koshev-msk/luci-app-atinout.git package/mine/luci-app-atinout
-git clone https://github.com/koshev-msk/luci-app-mmconfig.git package/mine/luci-app-mmconfig
+# git clone https://github.com/koshev-msk/luci-app-mmconfig.git package/mine/luci-app-mmconfig
 git clone https://github.com/koshev-msk/luci-app-modeminfo.git package/mine/luci-app-modeminfo
 git clone https://github.com/koshev-msk/luci-app-smstools3.git package/mine/luci-app-smstools3
