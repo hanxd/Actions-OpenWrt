@@ -75,6 +75,11 @@ popd
 # rm -rf luci-app-travelmate
 # svn co https://github.com/hanxd/ltm/trunk/luci-app-travelmate
 # popd
+
+pushd feeds/packages/net
+rm -rf banip
+svn co https://github.com/openwrt/packages/trunk/net/banip
+popd
 #=================================================
 
 #echo 'Netgearrainbow'
