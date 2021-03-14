@@ -86,7 +86,7 @@ popd
 
 #echo 'quectel'
 # ln -s ../../../quectel ./package/lean/
-svn co https://github.com/hanxd/extd/trunk/quectel package/mine/quectel
+# svn co https://github.com/hanxd/extd/trunk/quectel package/mine/quectel
 
 # Server酱
 git clone https://github.com/tty228/luci-app-serverchan.git package/mine/luci-app-serverchan
