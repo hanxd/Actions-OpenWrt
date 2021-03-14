@@ -32,7 +32,8 @@ sed -i '/mwan/i uci set network.RNDISv6.proto=dhcpv6' package/lean/default-setti
 sed -i '/mwan/i uci set network.RNDISv6.reqaddress=try' package/lean/default-settings/files/zzz-default-settings
 sed -i '/mwan/i uci set network.RNDISv6.reqprefix=auto' package/lean/default-settings/files/zzz-default-settings
 sed -i '/mwan/i uci commit network' package/lean/default-settings/files/zzz-default-settings
-sed -i "/mwan/i uci set firewall.@zone[1].network='wan wan6 RNDIS RNDISv6'" package/lean/default-settings/files/zzz-default-settings
+sed -i "/mwan/i uci add_list firewall.@zone[1].network='RNDIS'" package/lean/default-settings/files/zzz-default-settings
+sed -i "/mwan/i uci add_list firewall.@zone[1].network='RNDISv6'" package/lean/default-settings/files/zzz-default-settings
 sed -i '/mwan/i uci commit firewall' package/lean/default-settings/files/zzz-default-settings
 
 #echo 'Model '
