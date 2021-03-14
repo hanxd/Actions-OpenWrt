@@ -39,7 +39,6 @@ sed -i '/mwan/i uci commit firewall' package/lean/default-settings/files/zzz-def
 #echo 'Model '
 sed -i 's/HNET C108/Mifi/g' target/linux/ramips/dts/mt7620a_hnet_c108.dts
 sed -i 's/wwan0/usb0/g' target/linux/ramips/mt7620/base-files/etc/board.d/01_leds
-
 # sed -i 's/760000/f80000/g' target/linux/ramips/dts/mt7620n_zbtlink_zbt-cpe102.dts
 # sed -i '/zbtlink_zbt-cpe102/{s/7552k))$/15872k))/;}' target/linux/ramips/image/mt7620.mk
 
@@ -76,11 +75,6 @@ popd
 # rm -rf luci-app-travelmate
 # svn co https://github.com/hanxd/ltm/trunk/luci-app-travelmate
 # popd
-
-pushd feeds/packages/net
-rm -rf banip
-svn co https://github.com/openwrt/packages/trunk/net/banip
-popd
 #=================================================
 
 #echo 'Netgearrainbow'
