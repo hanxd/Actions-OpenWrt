@@ -81,7 +81,6 @@ popd
 # ln -s ../../../luci-theme-netgearrainbow ./package/lean/
 
 # echo 'hotspot'
-# cp -f ../luci-app-hotspot package/lean/
 # git clone https://github.com/hanxd/extd.git package/mine/luci-app-hotspot
 
 #echo 'quectel'
