@@ -62,10 +62,9 @@ pushd target/linux/ramips/patches-5.4
 rm -rf 997-hxd-ec20.patch
 wget https://github.com/hanxd/extd/releases/download/V1/997-hxd-ec20.patch
 popd
-
-pushd package/base-files/files/etc/init.d
-wget https://github.com/hanxd/extd/releases/download/V1/quectel
-popd
+# pushd package/base-files/files/etc/init.d
+# wget https://github.com/hanxd/extd/releases/download/V1/quectel
+# popd
 #=================================================
 
 #=================================================
